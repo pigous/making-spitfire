@@ -1,0 +1,78 @@
+body {
+    background-color:  #e0e0eb;
+
+}
+
+
+
+
+h1 {
+    color: navy;
+    margin-left: 20px;
+}
+.jumbotron {
+    text-align: center;
+    font-family: 'Glegoo', serif;
+    font-size: 50px;
+}
+
+h2 {
+    color: grey;
+}
+.navbar {
+    margin-bottom: 0px;
+}
+
+#text {
+    font-size: 25px;
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+    color: grey;
+}
+#text a{
+    font-family: 'Quicksand', sans-serif;
+    font-style: none;
+    color: black;
+    
+}
+.col-sm-4 {
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+}
+.title {
+    font-size: 25px;
+}
+#col-sm-6{
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 30px;
+}
+#stories {
+    text-align: center;
+    font-size: 30px;
+    padding-top: 50px;
+}
+#para {
+    padding-left: 70px;
+    padding-right: 70px;
+    font-size: 15px;
+    text-align: center;
+}
+#contact {
+    font-size: 25px;
+    align-content: center;
+    color: grey;
+}
+#button {
+    color: grey;
+    font-size: 20px;
+}
+#carousel {
+    width: 100%;
+}
+
+#subpara {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 13px;
+    text-align: justify;
+}
