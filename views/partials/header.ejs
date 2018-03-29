@@ -13,7 +13,6 @@
 
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<link rel="stylesheet" type="text/css" href="spitfire.css">
 </head>
 
 <body>
@@ -29,18 +28,18 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="/">Home</a></li>
+        <li class="<%= typeof page !== 'undefined' && page === 'home' ? 'active' : '' %>"><a href="/">Home</a></li>
         <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">About <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="/story">The Story</a></li>
+            <li><a href="/story" >The Story</a></li>
             <li><a href="/team">The Team</a></li>
             <li><a href="/project">The Project</a></li>
           </ul>
         </li>
-        <li><a href="/inform">Inform</a></li>
-        <li><a href="#">Inspire</a></li>
-        <li><a href="/discover">Discover</a></li>
+        <li class="<%= typeof page !== 'undefined' && page === 'inform' ? 'active' : '' %>"><a href="/inform">Inform</a></li>
+        <li class="<%= typeof page !== 'undefined' && page === 'inspire' ? 'active' : '' %>"><a href="#">Inspire</a></li>
+        <li class="<%= typeof page !== 'undefined' && page === 'discover' ? 'active' : '' %>"><a href="/discover">Discover</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
