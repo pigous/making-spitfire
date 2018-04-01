@@ -3,6 +3,9 @@ body {
 
 }
 
+
+
+
 h1 {
     color: navy;
     margin-left: 20px;
@@ -35,6 +38,10 @@ h2 {
 .col-sm-4 {
     text-align: center;
     font-family: 'Quicksand', sans-serif;
+    list-style-type: none;
+}
+.col-sm-4 ul {
+    list-style-type: none;
 }
 .title {
     font-size: 25px;
@@ -50,10 +57,11 @@ h2 {
     padding-top: 50px;
 }
 #para {
-    padding-left: 70px;
-    padding-right: 70px;
+    padding-left: 80px;
+    padding-right: 80px;
     font-size: 15px;
     text-align: center;
+    justify-content: all;
 }
 #contact {
     font-size: 25px;
