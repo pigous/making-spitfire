@@ -11,9 +11,13 @@ h1 {
     margin-left: 20px;
 }
 .jumbotron {
-    text-align: center;
-    font-family: 'Glegoo', serif;
-    font-size: 50px;
+        text-align: center;
+        font-family: 'Glegoo', serif;
+        font-size: 50px;
+        background-image: url('machine2.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        text-shadow: black 0.2em 0.2em 0.3em;
 }
 
 h2 {
