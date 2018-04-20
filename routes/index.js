@@ -30,4 +30,8 @@ router.get("/team", function(req, res){
     res.render("team/team", {page: "team"});
 });
 
+router.get("/design", function(req, res){
+    res.render("discover/design", {page: "design"});
+});
+
 module.exports = router;

@@ -5,13 +5,117 @@
 <link rel="stylesheet" type="text/css" href="stylesheets/contact.css">
 <title>Discover</title>
 
+
 <div class="jumbotron text-center">
 
 <div class="container">
-	<p>Discover the Stories Behind the Legend</p>
 	<br>
 	<br>
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+		
+		body {
+			margin: 0;
+			font-family: 'Quicksand';
+		}
+		
+		/* The grid: Three equal columns that floats next to each other */
+		.column {
+			float: left;
+			width: 33.33%;
+			padding: 50px;
+			text-align: center;
+			font-size: 25px;
+			cursor: pointer;
+			color: white;
+		}
+		
+		.containerTab {
+			padding: 20px;
+			color: white;
+		}
+		
+		/* Clear floats after the columns */
+		.row:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+		
+		/* Closable button inside the container tab */
+		.closebtn {
+			float: right;
+			color: white;
+			font-size: 35px;
+			cursor: pointer;
+		}
+		.find { 
+			font-family: 'Quicksand';
+			font-size: 40%;
+		}
+		</style>
+		<div style="text-align:center">
+  <h2>Discover the Stories behind the Legend</h2>
+  <p>Click below:</p>
+</div>
+
+<!-- Three columns -->
+<div class="row">
+  <div class="column" onclick="openTab('b1');" style= "background: #d1d1e0;">
+    The Design Office
+  </div>
+  <div class="column" onclick="openTab('b2');" style="background:#c2c2d6;">
+    The Works
+  </div>
+  <div class="column" onclick="openTab('b3');" style="background:#b3b3cc;">
+    Production
+  </div>
+</div>
+
+<!-- Full-width columns: (hidden by default) -->
+<div id="b1" class="containerTab" style="display:none;background:#d1d1e0">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>The Design Office</h2>
+	<p>The men and women who designed the Spitfire. From Chief Designer to Draughtsman. From Tracer to Mathematician. Metallurgist to Technical Writer.</p>
+	<img src = "designers.jpg">
+	<br>
+
+	<div class="find">
+	<a href="/design">Find out more...</a></div>
+	</div>
 	
+
+</div>
+
+<div id="b2" class="containerTab" style="display:none;background:#c2c2d6">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>The Works</h2>
+  <p>Who were the people who actually built the Spitfire?
+		A look at who the factory workers were, what they did and what they experienced. Everyone from the skilled workers from Supermarine in Southampton to the semi-skilled workers in the 'Shadow Factory' and 'Dispersal Works' </p>
+	<img src = "eastleighpeople.jpg">
+</div>
+
+<div id="b3" class="containerTab" style="display:none;background:#b3b3cc">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>Production</h2>
+	<p>Nothing gets made without 'the people behind the scenes', the men and women who were responsible for the day-to-day administration of the company. For ensuring that the designers and workers were paid and that what they made was sold.</p>
+	<img src = "people.jpg">
+</div>
+
+<script>
+function openTab(tabName) {
+  var i, x;
+  x = document.getElementsByClassName("containerTab");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  document.getElementById(tabName).style.display = "block";
+}
+</script>
+
+
 </div>
 </div>
 
