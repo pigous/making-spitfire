@@ -2,122 +2,85 @@
 <% include ../partials/header %>
 
 
-<link rel="stylesheet" type="text/css" href="stylesheets/contact.css">
-<title>Discover</title>
 
 
-<div class="jumbotron text-center">
-
-<div class="container">
-	<br>
-	<br>
-	<style>
-		* {
-			box-sizing: border-box;
+<title>The People</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+		.navbar {
+			margin-bottom: 0px;
 		}
-		
-		body {
-			margin: 0;
-			font-family: 'Quicksand';
-		}
-		
-		/* The grid: Three equal columns that floats next to each other */
-		.column {
-			float: left;
-			width: 33.33%;
-			padding: 50px;
-			text-align: center;
-			font-size: 25px;
-			cursor: pointer;
-			color: white;
-		}
-		
-		.containerTab {
-			padding: 20px;
-			color: white;
-		}
-		
-		/* Clear floats after the columns */
-		.row:after {
-			content: "";
-			display: table;
-			clear: both;
-		}
-		
-		/* Closable button inside the container tab */
-		.closebtn {
-			float: right;
-			color: white;
-			font-size: 35px;
-			cursor: pointer;
-		}
-		.find { 
-			font-family: 'Quicksand';
-			font-size: 40%;
-		}
-		</style>
-		<div style="text-align:center">
-  <h2>Discover the Stories behind the Legend</h2>
-  <p>Click below:</p>
-</div>
-
-<!-- Three columns -->
-<div class="row">
-  <div class="column" onclick="openTab('b1');" style= "background: #d1d1e0;">
-    The Design Office
-  </div>
-  <div class="column" onclick="openTab('b2');" style="background:#c2c2d6;">
-    The Works
-  </div>
-  <div class="column" onclick="openTab('b3');" style="background:#b3b3cc;">
-    Production
-  </div>
-</div>
-
-<!-- Full-width columns: (hidden by default) -->
-<div id="b1" class="containerTab" style="display:none;background:#d1d1e0">
-  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-  <h2>The Design Office</h2>
-	<p>The men and women who designed the Spitfire. From Chief Designer to Draughtsman. From Tracer to Mathematician. Metallurgist to Technical Writer.</p>
-	<img src = "designers.jpg">
-	<br>
-
-	<div class="find">
-	<a href="/design">Find out more...</a></div>
-	</div>
+  .row {
+		font-family: 'Quicksand'
+	}
+	.bg-grey {
+		background-color: #f6f6f6;
+		font-family: 'Quicksand'
+	}
+	.container-fluid {
+		font-family: 'Quicksand';
+		text-align:center;
+	}
 	
 
-</div>
-
-<div id="b2" class="containerTab" style="display:none;background:#c2c2d6">
-  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-  <h2>The Works</h2>
-  <p>Who were the people who actually built the Spitfire?
-		A look at who the factory workers were, what they did and what they experienced. Everyone from the skilled workers from Supermarine in Southampton to the semi-skilled workers in the 'Shadow Factory' and 'Dispersal Works' </p>
-	<img src = "eastleighpeople.jpg">
-</div>
-
-<div id="b3" class="containerTab" style="display:none;background:#b3b3cc">
-  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-  <h2>Production</h2>
-	<p>Nothing gets made without 'the people behind the scenes', the men and women who were responsible for the day-to-day administration of the company. For ensuring that the designers and workers were paid and that what they made was sold.</p>
-	<img src = "people.jpg">
-</div>
-
-<script>
-function openTab(tabName) {
-  var i, x;
-  x = document.getElementsByClassName("containerTab");
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";
-  }
-  document.getElementById(tabName).style.display = "block";
-}
-</script>
-
-
-</div>
-</div>
-
-
-<% include ../partials/footer %>
+	</style>
+	
+	<body>
+			<div id='content' class='container'>
+					<div class='row'>
+							<div class='col-xs-10 col-xs-offset-1'>
+									<form>
+											<fieldset>
+													<legend>The People</legend>
+															<img class='img-responsive' src="machine2.jpg" alt="img" />
+											</fieldset>
+									</form>
+							</div>
+							<div class="jumbotron text-center">
+									<h1>Discover the Stories</h1> 
+									<p>People behind the legendary aircraft</p> 
+								</div>
+					</div>
+			</div>
+			<div class="container-fluid">
+					<h2>Design Office</h2>
+					<p>from designer to tracer, aerodynamicist to metallurgist,
+							all the skills required to create an aircraft</p> 
+					<img src="designers.jpg">
+					<br>
+					<br>
+				<a href="/design"><button class="btn btn-default btn-lg">Find Out More</button></a>
+					<br>
+				</div>
+				
+				<div class="container-fluid bg-grey">
+					<h2>The Works</h2>
+					<p>Who were the people who actually built the Spitfire
+							A look at who the factory workers were, what they did and what they experienced. 
+							Everyone from the skilled workers from Supermarine in Southampton to the semi-skilled workers in the 'Shadow Factory' and 'Dispersal Works' </p>
+							<img src="eastleighpeople.jpg">
+				<br>
+				<br>
+						<button class="btn btn-default btn-lg">Find Out More</button>
+						<br>
+				</div>
+				<br>
+				<div class="container-fluid">
+						<h2>Commercials</h2>
+						<p>Nothing gets made without 'the people behind the scenes', the men and women who were responsible for the day-to-day administration of the company. For ensuring that the designers and workers were paid and that what they made was sold.</p> 
+						<img src="people.jpg">
+						<br>
+						<br>
+						<button class="btn btn-default btn-lg">Find Out More</button>
+						<br>
+					</div>
+			</body>

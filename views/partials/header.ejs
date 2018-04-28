@@ -14,6 +14,11 @@
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
+<style>
+  .navbar {
+    margin-bottom: 0px;
+  }
+</style>
 
 <body>
   <nav class="navbar navbar-inverse">
@@ -37,9 +42,9 @@
             <li><a href="/project">The Project</a></li>
           </ul>
         </li>
-        <li class="<%= typeof page !== 'undefined' && page === 'inform' ? 'active' : '' %>"><a href="/inform">Inform</a></li>
-        <li class="<%= typeof page !== 'undefined' && page === 'inspire' ? 'active' : '' %>"><a href="#">Inspire</a></li>
-        <li class="<%= typeof page !== 'undefined' && page === 'discover' ? 'active' : '' %>"><a href="/discover">Discover</a></li>
+        <li class="<%= typeof page !== 'undefined' && page === 'inform' ? 'active' : '' %>"><a href="/inform">Machine</a></li>
+        <li class="<%= typeof page !== 'undefined' && page === 'inspire' ? 'active' : '' %>"><a href="#">Icon</a></li>
+        <li class="<%= typeof page !== 'undefined' && page === 'discover' ? 'active' : '' %>"><a href="/discover">People</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
