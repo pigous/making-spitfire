@@ -60,11 +60,10 @@ h2 {
     font-size: 30px;
     padding-top: 50px;
 }
-#para {
-    padding-left: 80px;
-    padding-right: 80px;
+#para {   
+    text-align: justify; 
     font-size: 15px;
-    text-align: center;
+  
     justify-content: all;
 }
 #contact {
