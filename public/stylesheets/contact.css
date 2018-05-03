@@ -9,8 +9,9 @@ body {
 	background-image: url('machine2.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
+}
 	
-.container {
+.container{
 	font-family: 'Quicksand', sans-serif;
 }
 #png {
@@ -20,7 +21,4 @@ body {
 #text {
 	font-family: 'Quicksand', sans-serif;
 	
-}
-#a {
-	size: 20px;
 }
