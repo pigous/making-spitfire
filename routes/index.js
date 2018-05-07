@@ -17,6 +17,9 @@ router.get("/discover", function(req, res){
 router.get("/inform", function(req, res){
     res.render("inform/inform", {page: "inform"});
 });
+router.get("/events", function(req, res){
+    res.render("events/events", {page: "events"});
+});
 
 router.get("/project", function(req, res){
     res.render("project/project", {page: "project"});
