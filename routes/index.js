@@ -36,5 +36,8 @@ router.get("/team", function(req, res){
 router.get("/design", function(req, res){
     res.render("discover/design", {page: "design"});
 });
+router.get("/forum", function(req, res){
+    res.render("forum/forum", {page: "forum"});
+});
 
 module.exports = router;
