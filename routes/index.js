@@ -39,5 +39,8 @@ router.get("/design", function(req, res){
 router.get("/forum", function(req, res){
     res.render("forum/forum", {page: "forum"});
 });
+router.get("/icon", function(req, res){
+    res.render("icon/icon", {page: "icon"});
+});
 
 module.exports = router;
