@@ -36,7 +36,7 @@ router.get("/team", function(req, res){
 router.get("/design", function(req, res){
     res.render("discover/design", {page: "design"});
 });
-router.get("/design", function(req, res){
+router.get("/commercials", function(req, res){
     res.render("discover/commercials", {page: "commercials"});
 });
 router.get("/forum", function(req, res){
