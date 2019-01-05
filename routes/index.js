@@ -45,7 +45,6 @@ router.get("/design", function(req, res){
 router.get("/commercials", function(req, res){
     res.render("discover/commercials", {page: "commercials"});
 });
-<<<<<<< HEAD
 
 router.get("/icon", function(req, res){
     res.render("icon/icon", {page: "icon"});
@@ -94,13 +93,5 @@ router.get("/logout", function(req, res){
     req.flash("success", "Successfully logged out");
     res.redirect("/");
 });
-=======
-router.get("/forum", function(req, res){
-    res.render("forum/forum", {page: "forum"});
-});
-router.get("/icon", function(req, res){
-    res.render("icon/icon", {page: "icon"});
-});
->>>>>>> 868f7c898e5d399e6a4c0f61ee63f180d0f9985d
 
 module.exports = router;
