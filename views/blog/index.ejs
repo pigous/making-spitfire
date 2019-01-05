@@ -1,0 +1,65 @@
+<% include ../partials/header %>
+<link rel="stylesheet" type="text/css" href="stylesheets/contact.css">
+<title>Blog</title>
+
+<div class="container">
+    <h1>Welcome to "Making of the Spitfire" Blog</h1>
+    <br>
+    <hr>
+    <br>
+    <div class="row">
+        <!-- creating a cycle so we can render all the blog entries and function(blog) the id of the actual blog entry -->
+        <% blogs.forEach(function(blog){ %>
+            <!--now we have to define the html code for the blog entries -->    
+           <div class="col-md-4 col-sm-12">
+                <div class="thumbnail">
+                    <div class="caption">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title truncate-elipse-title"><%= blog.title %></h4>
+                                    <p class="truncate-elipse-body"><%=blog.body%></p>
+                                    <a href="/blog/<%=blog._id%>" class="card-link">Read article</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>          
+            </div> 
+        <% })%>
+    </div>    
+</div>
+
+<style>
+
+    .container {
+        text-align: center;
+    }
+    /* .truncate-elips{
+        display: table;
+        table-layout: fixed;
+        width: 100%;
+        white-space: nowrap;
+    } */
+    .truncate-elipse-title{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        /* white-space: nowrap; */
+        max-width: 100%;
+        height: 4rem;
+    }
+
+    .truncate-elipse-body{
+        overflow : hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+        max-width: 100%;
+        height: 10rem;
+    }
+
+</style>
+
+<% include ../partials/footer %>

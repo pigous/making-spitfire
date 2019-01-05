@@ -44,12 +44,35 @@
         <li class="<%= typeof page !== 'undefined' && page === 'inform' ? 'active' : '' %>"><a href="/inform">Machine</a></li>
         <li class="<%= typeof page !== 'undefined' && page === 'inspire' ? 'active' : '' %>"><a href="#">Icon</a></li>
         <li class="<%= typeof page !== 'undefined' && page === 'discover' ? 'active' : '' %>"><a href="/discover">People</a></li>
-        <li class="<%= typeof page !== 'undefined' && page === 'discover' ? 'active' : '' %>"><a href="/events">Events</a></li>
+        <li class="<%= typeof page !== 'undefined' && page === 'events' ? 'active' : '' %>"><a href="/events">Events</a></li>
+        <li class="<%= typeof page !== 'undefined' && page === 'blog' ? 'active' : '' %>"><a href="/blog">Blog</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <% if(!currentUser) { %>
+          <li class="<%= typeof page !== 'undefined' && page === 'signup' ? 'active' : '' %>"><a href="/signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+          <li class="<%= typeof page !== 'undefined' && page === 'login' ? 'active' : '' %>"><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <% } else {%>
+          <!-- /seedDatabasde only for development - afterwards delete -->
+          <li><a href="/seedDatabase">Signed in as <%= currentUser.username%></a></li>>
+          <li class="<%= typeof page !== 'undefined' && page === 'logout' ? 'active' : '' %>"><a href="/logout">Logout</a></li>
+          <% } %>
+        
       </ul>
     </div>
   </div>
 </nav>
+<div class="container">
+  <% if(error && error.length>0) { %>
+    <div class="alert alert-danger" role="alert">
+      <%= error %>
+    </div> 
+  <% } %>
+  <% if(success && success.length>0) { %>
+    <div class="alert alert-success" role="alert">
+      <%= success%>
+
+    </div> 
+  <% } %>
+</div>
+
+

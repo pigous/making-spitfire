@@ -1,0 +1,40 @@
+<% include ../partials/header %>
+
+<link rel="stylesheet" type="text/css" href="stylesheets/contact.css">
+
+
+<title>Show Blog</title>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-9">
+            <div class="thumbnail">
+                <div class="caption-full">
+                    <h4><a><%=blog.title%></a></h4>
+                    <p data-html="true"><%=blog.body%></p>
+                    <p><em>
+                        Created by: <%=blog.author.username%>, <%=moment(blog.createdAt).format("MMM Do YY")%>
+                    </em></p>
+                    <!-- this is a requirement - if there is a user who is logged in and that user's id equals with the id of the author of the blog, then the edit and delete button acessable  -->
+                    <%if(currentUser && blog.author.id.equals(currentUser._id)){%>
+
+                      <a class="btn btn-xs btn-warning" href="/blog/<%=blog._id%>/edit">Edit</a>
+                      <form class="delete-form" action="/blog/<%=blog._id%>/delete?_method=DELETE" method="POST">
+                        <button class="btn btn-xs btn-danger">Delete</button> 
+                    </form>
+                    <% }%>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+
+
+<% include ../partials/footer %>

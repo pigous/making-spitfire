@@ -22,3 +22,12 @@ body {
 	font-family: 'Quicksand', sans-serif;
 	
 }
+
+.col-md-6{
+	align-content: center
+}
+
+.blogentry{
+	text-overflow: ellipsis;
+	max-height: 5em;
+}
